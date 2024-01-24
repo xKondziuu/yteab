@@ -1,0 +1,26 @@
+{
+  "name": "YouTube Ethical AdBlocker",
+  "author": "Kronox",
+  "version": "1.0.0",
+  "description": "Don't waste time watching ads. Instead, support the creators by and automatically watching all ads in the background.",
+  "manifest_version": 3,
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "yteab@yteab.com"
+    }
+  },
+  "content_scripts": [{
+    "matches": ["*://*.youtube.com/*"],
+    "css": ["inject/css/index.min.css"],
+    "js": ["inject/loader.js"]
+  }],
+  "permissions": [
+    "activeTab",
+    "cookies",
+    "dns",
+    "scripting",
+    "storage",
+    "unlimitedStorage",
+    "webNavigation"
+  ]
+}
